@@ -1,11 +1,11 @@
 <div class="screen">
   <div class="history">
-    <div margin="0" *ngIf="(inputValue$ | async) != null else elseValue">
-      {{storedValue$ | async}} {{operation$ | async}} {{inputValue$ | async}} 
+    <div *ngIf="(storedValue$ | async) == null || (operation$ | async) == null else elseValue">
+      {{inputValue$ | async}}
     </div>
-    <ng-template #elseValue> {{storedValue$ | async}} {{operation$ | async}}</ng-template>
+    <ng-template #elseValue> {{storedValue$ | async}} {{operation$ | async}} {{inputValue$ |async}} </ng-template>
   </div>
   <div class="mainValue">
-    {{storedValue$ | async}}    
+    {{storedValue$ | async}}
   </div>
 </div>
