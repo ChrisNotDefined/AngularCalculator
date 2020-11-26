@@ -1,7 +1,25 @@
-div {
+.screen {
   background-color: gray;
   border-radius: 5px;
   padding: 10px;
   margin: 10px 30px;
+}
+
+.history {
+  font-size: 1.5em;
+  text-align: right;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-bottom: dashed 5px rgb(85, 85, 85);
+}
+
+.mainValue {
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 2em;
+}
+
+.mainValue * {
+  margin: 0;
+  padding: 0;
 }

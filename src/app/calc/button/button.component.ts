@@ -1,4 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Store } from '@ngxs/store';
+import { NewInputAction } from 'src/app/Models/Calculator/calculator.redux';
+
 
 @Component({
   selector: 'app-button',
@@ -7,11 +10,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
 
-  constructor() { }
+  constructor( private store: Store) { }
 
   @Input() content;
 
   ngOnInit(): void {
+  }
+
+  pressedButton(): void {
+    this.store.dispatch(new NewInputAction(this.content));
   }
 
 }
