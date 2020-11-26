@@ -1,0 +1,12 @@
+<div class="panel">
+  <app-screen></app-screen>
+  <div class="keypad">
+    <div>
+      <div class="row" *ngFor="let row of keypad">
+        <div *ngFor="let item of row">
+          <app-button content="{{item}}"></app-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

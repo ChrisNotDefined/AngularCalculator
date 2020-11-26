@@ -1,0 +1,18 @@
+button {
+  width: 100px;
+  height: 80px;
+  font-size: 2em;
+  border: none;
+  background-color: green;
+  margin: 5px;
+  border-radius: 10px;
+  outline: none;
+}
+
+button:hover {
+  background-color: white
+}
+
+button:active {
+  background-color: lightgreen;
+}
